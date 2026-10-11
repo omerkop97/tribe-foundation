@@ -38,6 +38,65 @@ body {
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes line-up {
+  from { transform: translateY(108%); }
+  to { transform: translateY(0); }
+}
+@keyframes rise {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes img-in {
+  from { clip-path: inset(100% 0 0 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+@keyframes tab-fade {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+
+.hero-line {
+  animation: line-up 1s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  animation-delay: var(--d, 0ms);
+}
+.rise {
+  animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  animation-delay: var(--d, 0ms);
+}
+.img-reveal {
+  animation: img-in 1.3s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  animation-delay: var(--d, 0ms);
+}
+.tab-fade {
+  animation: tab-fade 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.marquee-track {
+  animation: marquee 50s linear infinite;
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .hero-line,
+  .rise,
+  .img-reveal,
+  .tab-fade,
+  .marquee-track {
+    animation: none;
+  }
+}
+
 .font-display {
   font-family: var(--font-display), Arial Narrow, sans-serif;
   font-optical-sizing: none;

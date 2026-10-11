@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { pillars } from "@/lib/pillars";
+import { Reveal } from "./Reveal";
 
 export function PillarShowcase() {
   const [active, setActive] = useState(0);
@@ -11,17 +12,21 @@ export function PillarShowcase() {
   return (
     <section className="bg-forest text-offwhite">
       <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-offwhite/50">
-          Waar we voor staan
-        </p>
-        <h2 className="font-display mt-4 max-w-2xl text-4xl leading-[0.95] md:text-5xl">
-          Drie pijlers die de mens achter de sporter versterken.
-        </h2>
+        <Reveal>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-offwhite/50">
+            Waar we voor staan
+          </p>
+          <h2 className="font-display mt-4 max-w-2xl text-4xl leading-[0.95] md:text-5xl">
+            Drie pijlers die de mens achter de sporter versterken.
+          </h2>
+        </Reveal>
 
-        <div className="mt-10 flex flex-wrap gap-2 border-b border-offwhite/15">
+        <div role="tablist" className="mt-10 flex flex-wrap gap-2 border-b border-offwhite/15">
           {pillars.map((p, i) => (
             <button
               key={p.tab}
+              role="tab"
+              aria-selected={i === active}
               onClick={() => setActive(i)}
               className="relative px-4 py-4 text-left text-sm font-semibold transition-colors md:px-6"
               style={{ color: i === active ? p.accent : "rgba(247,245,240,0.55)" }}
@@ -39,7 +44,7 @@ export function PillarShowcase() {
         </div>
 
         <div className="mt-12">
-          <div className="max-w-2xl">
+          <div key={active} role="tabpanel" className="tab-fade max-w-2xl">
             <p
               className="text-xs font-semibold uppercase tracking-[0.15em]"
               style={{ color: pillar.accent }}

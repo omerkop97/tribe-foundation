@@ -17,13 +17,15 @@ type ButtonProps = {
   children: ReactNode;
   variant?: Variant;
   className?: string;
+  onClick?: () => void;
 };
 
-export function Button({ href, children, variant = "primary", className = "" }: ButtonProps) {
+export function Button({ href, children, variant = "primary", className = "", onClick }: ButtonProps) {
   return (
     <Link
       href={href}
-      className={`inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-colors ${variantClasses[variant]} ${className}`}
+      onClick={onClick}
+      className={`inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 ${variantClasses[variant]} ${className}`}
     >
       {children}
     </Link>

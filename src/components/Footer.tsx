@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Reveal } from "./Reveal";
 
 const columns = [
   {
@@ -20,8 +21,16 @@ const columns = [
 
 export function Footer() {
   return (
-    <footer className="bg-forest text-offwhite">
-      <div className="mx-auto max-w-6xl px-6 py-16">
+    <footer className="overflow-hidden bg-forest text-offwhite">
+      <div className="mx-auto max-w-6xl px-6 pb-16 pt-12 md:pt-20">
+        <Reveal>
+          <p
+            aria-hidden
+            className="font-display mb-16 select-none text-[15vw] leading-[0.85] text-offwhite/10 md:mb-24 md:text-[9.5rem]"
+          >
+            Together we rise.
+          </p>
+        </Reveal>
         <div className="flex flex-col gap-12 md:flex-row md:justify-between">
           <div className="max-w-xs">
             <span className="font-display text-xl tracking-wide">Tribe Foundation</span>

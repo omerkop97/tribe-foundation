@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
+import { Reveal } from "@/components/Reveal";
 import { SimpleCta } from "@/components/SimpleCta";
 import { pillars } from "@/lib/pillars";
 
@@ -31,10 +32,10 @@ export default function OnzePijlers() {
           id={pillar.tab.toLowerCase()}
           className={`scroll-mt-20 ${i % 2 === 0 ? "bg-white" : "bg-sand"}`}
         >
-          <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
-            <div className="grid gap-10 md:grid-cols-[auto_1fr] md:gap-16">
+          <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+            <Reveal className="grid gap-10 md:grid-cols-[auto_1fr] md:gap-16">
               <span
-                className="font-display text-6xl leading-none md:text-7xl"
+                className="font-display text-7xl leading-none md:text-9xl"
                 style={{ color: pillar.accent }}
               >
                 {pillar.number}
@@ -72,7 +73,7 @@ export default function OnzePijlers() {
                   {pillar.linkLabel} →
                 </Link>
               </div>
-            </div>
+            </Reveal>
           </div>
         </section>
       ))}

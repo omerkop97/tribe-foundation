@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { CountUp } from "@/components/CountUp";
 import { PageHero } from "@/components/PageHero";
+import { Reveal } from "@/components/Reveal";
 import { SimpleCta } from "@/components/SimpleCta";
 import { pillars } from "@/lib/pillars";
 
@@ -11,9 +13,9 @@ export const metadata: Metadata = {
 };
 
 const stats = [
-  { value: "250+", label: "kinderen bereikt met schoon drinkwater op school in Pakistan" },
-  { value: "2", label: "locaties waar we structureel actief zijn: Zevenaar en Pakistan" },
-  { value: "3", label: "pijlers die samen de mens achter de sporter versterken" },
+  { to: 250, suffix: "+", label: "kinderen bereikt met schoon drinkwater op school in Pakistan" },
+  { to: 2, suffix: "", label: "locaties waar we structureel actief zijn: Zevenaar en Pakistan" },
+  { to: 3, suffix: "", label: "pijlers die samen de mens achter de sporter versterken" },
 ];
 
 export default function ProjectenEnImpact() {
@@ -33,11 +35,15 @@ export default function ProjectenEnImpact() {
       <section className="bg-white">
         <div className="mx-auto max-w-6xl px-6 pb-16 md:pb-20">
           <div className="grid gap-px overflow-hidden rounded-sm border border-charcoal/10 bg-charcoal/10 md:grid-cols-3">
-            {stats.map((stat) => (
-              <div key={stat.label} className="bg-offwhite p-8">
-                <p className="font-display text-4xl text-forest">{stat.value}</p>
+            {stats.map((stat, i) => (
+              <Reveal key={stat.label} delay={i * 120} className="bg-offwhite p-8">
+                <CountUp
+                  to={stat.to}
+                  suffix={stat.suffix}
+                  className="font-display block text-5xl text-forest"
+                />
                 <p className="mt-2 text-sm text-charcoal/60">{stat.label}</p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -45,19 +51,21 @@ export default function ProjectenEnImpact() {
 
       <section className="bg-sand">
         <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">
-            Onze projecten
-          </p>
-          <h2 className="font-display mt-4 max-w-2xl text-3xl leading-[0.95] text-charcoal md:text-4xl">
-            Per pijler, per plek.
-          </h2>
+          <Reveal>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">
+              Onze projecten
+            </p>
+            <h2 className="font-display mt-4 max-w-2xl text-3xl leading-[0.95] text-charcoal md:text-5xl">
+              Per pijler, per plek.
+            </h2>
+          </Reveal>
 
           <div className="mt-12 flex flex-col gap-6">
             {pillars.map((pillar) => (
-              <div
+              <Reveal
                 key={pillar.tab}
                 id={pillar.tab.toLowerCase()}
-                className="scroll-mt-20 rounded-sm border-l-4 bg-white p-8 md:p-10"
+                className="scroll-mt-20 rounded-sm border-l-4 bg-white p-8 transition-shadow duration-500 hover:shadow-lg md:p-10"
                 style={{ borderColor: pillar.accent }}
               >
                 <div className="flex flex-wrap items-baseline justify-between gap-4">
@@ -92,7 +100,7 @@ export default function ProjectenEnImpact() {
                 >
                   Meer over deze pijler →
                 </Link>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>

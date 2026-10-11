@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-export function Logo() {
+export function Logo({ onClick }: { onClick?: () => void }) {
   return (
-    <Link href="/" className="flex items-center gap-3 shrink-0">
+    <Link href="/" onClick={onClick} className="flex items-center gap-3 shrink-0">
       <span className="flex h-9 w-9 items-center justify-center bg-forest text-offwhite font-display text-lg">
         T
       </span>

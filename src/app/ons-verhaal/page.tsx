@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
+import { Reveal } from "@/components/Reveal";
 import { SimpleCta } from "@/components/SimpleCta";
 
 export const metadata: Metadata = {
@@ -61,15 +62,15 @@ export default function OnsVerhaal() {
 
       <section className="bg-white">
         <div className="mx-auto grid max-w-6xl gap-12 px-6 py-16 md:grid-cols-2 md:gap-20 md:py-20">
-          <div>
+          <Reveal>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">
               Het probleem
             </p>
-            <h2 className="font-display mt-4 text-3xl leading-[0.95] text-charcoal md:text-4xl">
+            <h2 className="font-display mt-4 text-3xl leading-[0.95] text-charcoal md:text-5xl">
               Talent stopt te vaak bij de eerste drempel.
             </h2>
-          </div>
-          <div className="text-lg text-charcoal/70">
+          </Reveal>
+          <Reveal delay={150} className="text-lg text-charcoal/70">
             <p>
               Een lidmaatschap, sportkleding, vervoer naar de club, boeken op school —
               het zijn kleine kosten die voor sommige gezinnen net te veel zijn. Niet
@@ -80,25 +81,27 @@ export default function OnsVerhaal() {
               jongeren die de structuur en het zelfvertrouwen van sport mislopen op
               precies het moment dat het verschil maakt.
             </p>
-          </div>
+          </Reveal>
         </div>
       </section>
 
       <section className="bg-sand">
         <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">
-            Onze aanpak
-          </p>
-          <h2 className="font-display mt-4 max-w-2xl text-3xl leading-[0.95] text-charcoal md:text-4xl">
-            Hoe we dat aanpakken.
-          </h2>
+          <Reveal>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">
+              Onze aanpak
+            </p>
+            <h2 className="font-display mt-4 max-w-2xl text-3xl leading-[0.95] text-charcoal md:text-5xl">
+              Hoe we dat aanpakken.
+            </h2>
+          </Reveal>
           <div className="mt-12 grid gap-10 md:grid-cols-3 md:gap-8">
-            {approach.map((item) => (
-              <div key={item.number}>
+            {approach.map((item, i) => (
+              <Reveal key={item.number} delay={i * 130}>
                 <span className="font-display text-sm text-gold-dark">{item.number}</span>
                 <h3 className="mt-3 text-lg font-semibold text-charcoal">{item.title}</h3>
                 <p className="mt-2 text-sm text-charcoal/60">{item.description}</p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -106,24 +109,27 @@ export default function OnsVerhaal() {
 
       <section className="bg-white">
         <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">
-            Waar we werken
-          </p>
-          <h2 className="font-display mt-4 max-w-2xl text-3xl leading-[0.95] text-charcoal md:text-4xl">
-            Lokaal geworteld, internationaal actief.
-          </h2>
+          <Reveal>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-charcoal/50">
+              Waar we werken
+            </p>
+            <h2 className="font-display mt-4 max-w-2xl text-3xl leading-[0.95] text-charcoal md:text-5xl">
+              Lokaal geworteld, internationaal actief.
+            </h2>
+          </Reveal>
           <div className="mt-12 grid gap-6 md:grid-cols-2">
-            {locations.map((loc) => (
-              <div
+            {locations.map((loc, i) => (
+              <Reveal
                 key={loc.place}
-                className="rounded-sm border border-charcoal/10 bg-offwhite p-8"
+                delay={i * 150}
+                className="rounded-sm border border-charcoal/10 bg-offwhite p-8 transition-shadow duration-500 hover:shadow-lg"
               >
                 <p className="text-xs font-semibold uppercase tracking-[0.15em] text-gold-dark">
                   {loc.scope}
                 </p>
-                <h3 className="font-display mt-2 text-2xl text-forest">{loc.place}</h3>
+                <h3 className="font-display mt-2 text-3xl text-forest">{loc.place}</h3>
                 <p className="mt-3 text-charcoal/70">{loc.description}</p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
