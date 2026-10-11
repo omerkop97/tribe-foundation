@@ -40,7 +40,7 @@ export default function Home() {
               </span>
             </h1>
             <p className="rise mt-6 max-w-xl text-lg text-charcoal/70" style={delay(550)}>
-              Wij gebruiken de kracht van sport om mensen verder te brengen — met
+              Wij gebruiken de kracht van sport om mensen verder te brengen: met
               onderwijs, vrije toegang tot beweging en steun voor talent dat anders
               verloren gaat.
             </p>

@@ -1,11 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export function Logo({ onClick }: { onClick?: () => void }) {
   return (
     <Link href="/" onClick={onClick} className="flex items-center gap-3 shrink-0">
-      <span className="flex h-9 w-9 items-center justify-center bg-forest text-offwhite font-display text-lg">
-        T
-      </span>
+      <Image src="/logo.png" alt="" width={52} height={40} loading="eager" className="h-10 w-auto" />
       <span className="flex flex-col leading-none">
         <span className="font-display text-base tracking-wide text-charcoal">
           Tribe

@@ -7,7 +7,7 @@ import { SimpleCta } from "@/components/SimpleCta";
 import { pillars } from "@/lib/pillars";
 
 export const metadata: Metadata = {
-  title: "Projecten & impact — Tribe Foundation",
+  title: "Projecten & impact | Tribe Foundation",
   description:
     "De concrete projecten van TRIBE Foundation in Zevenaar en Pakistan, en de impact die daaruit voortkomt.",
 };

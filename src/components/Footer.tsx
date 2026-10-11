@@ -35,7 +35,7 @@ export function Footer() {
           <div className="max-w-xs">
             <span className="font-display text-xl tracking-wide">Tribe Foundation</span>
             <p className="mt-4 text-sm text-offwhite/70">
-              Wij gebruiken de kracht van sport om mensen verder te brengen — lokaal in
+              Wij gebruiken de kracht van sport om mensen verder te brengen, lokaal in
               Zevenaar én internationaal.
             </p>
           </div>

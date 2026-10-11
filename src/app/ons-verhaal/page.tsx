@@ -4,7 +4,7 @@ import { Reveal } from "@/components/Reveal";
 import { SimpleCta } from "@/components/SimpleCta";
 
 export const metadata: Metadata = {
-  title: "Ons verhaal — Tribe Foundation",
+  title: "Ons verhaal | Tribe Foundation",
   description:
     "Waarom TRIBE Foundation bestaat: sport als ingang naar zelfvertrouwen, structuur en kansen, zonder drempels van geld of afkomst.",
 };
@@ -26,7 +26,7 @@ const approach = [
     number: "03",
     title: "Samen vooruit",
     description:
-      "We werken met scholen, sportclubs en lokale partners die de omgeving kennen — zij maken impact duurzaam, wij versnellen het.",
+      "We werken met scholen, sportclubs en lokale partners die de omgeving kennen. Zij maken impact duurzaam, wij versnellen het.",
   },
 ];
 
@@ -54,7 +54,7 @@ export default function OnsVerhaal() {
         intro={
           <p>
             TRIBE is ontstaan uit een simpel idee: sport is een van de krachtigste
-            manieren om mensen vooruit te helpen — maar alleen als de toegang ertoe
+            manieren om mensen vooruit te helpen, maar alleen als de toegang ertoe
             niet afhangt van geld, afkomst of geluk.
           </p>
         }
@@ -72,7 +72,7 @@ export default function OnsVerhaal() {
           </Reveal>
           <Reveal delay={150} className="text-lg text-charcoal/70">
             <p>
-              Een lidmaatschap, sportkleding, vervoer naar de club, boeken op school —
+              Een lidmaatschap, sportkleding, vervoer naar de club, boeken op school:
               het zijn kleine kosten die voor sommige gezinnen net te veel zijn. Niet
               omdat de wil ontbreekt, maar omdat de rekening niet rond komt.
             </p>

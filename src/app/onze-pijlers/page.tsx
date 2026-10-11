@@ -6,7 +6,7 @@ import { SimpleCta } from "@/components/SimpleCta";
 import { pillars } from "@/lib/pillars";
 
 export const metadata: Metadata = {
-  title: "Onze pijlers — Tribe Foundation",
+  title: "Onze pijlers | Tribe Foundation",
   description:
     "Educatie, sportparticipatie en talentontwikkeling: de drie pijlers waarmee TRIBE Foundation de mens achter de sporter versterkt.",
 };
@@ -20,7 +20,7 @@ export default function OnzePijlers() {
         intro={
           <p>
             Sport is het middel, niet het doel. Onze drie pijlers versterken samen de
-            mens achter de sporter — op school, op het veld en op weg naar een hoger
+            mens achter de sporter: op school, op het veld en op weg naar een hoger
             niveau.
           </p>
         }
@@ -80,7 +80,7 @@ export default function OnzePijlers() {
 
       <SimpleCta
         heading="Welke pijler past bij jouw bijdrage?"
-        body="Of het nu gaat om educatie, sportparticipatie of talentontwikkeling — er is altijd een concrete manier om aan te sluiten."
+        body="Of het nu gaat om educatie, sportparticipatie of talentontwikkeling. Er is altijd een concrete manier om aan te sluiten."
       />
     </>
   );

@@ -18,9 +18,9 @@ const bigShoulders = Big_Shoulders({
 });
 
 export const metadata: Metadata = {
-  title: "Tribe Foundation — Sport is het begin. Kansen zijn het doel.",
+  title: "Tribe Foundation | Sport is het begin. Kansen zijn het doel.",
   description:
-    "Tribe Foundation gebruikt de kracht van sport om mensen verder te brengen — met onderwijs, vrije toegang tot beweging en steun voor talent dat anders verloren gaat.",
+    "Tribe Foundation gebruikt de kracht van sport om mensen verder te brengen: met onderwijs, vrije toegang tot beweging en steun voor talent dat anders verloren gaat.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

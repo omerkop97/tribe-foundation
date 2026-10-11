@@ -17,7 +17,7 @@ export function ContactForm() {
 
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
-    const subject = `Bijdrage aan TRIBE Foundation — ${contribution}`;
+    const subject = `Bijdrage aan TRIBE Foundation: ${contribution}`;
     const body = `Naam: ${name}\nE-mailadres: ${email}\nIk wil bijdragen aan: ${contribution}\n\nBericht:\n${message}`;
     window.location.href = `mailto:info@tribefoundation.nl?subject=${encodeURIComponent(
       subject

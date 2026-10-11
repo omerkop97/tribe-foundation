@@ -34,7 +34,7 @@ export function PillarsOverview() {
           <p className="text-lg text-charcoal/70">
             Sport is daarbij geen eindpunt. Het is een ingang naar zelfvertrouwen,
             structuur, gezondheid en verbinding. Vanuit die overtuiging bouwen we aan
-            projecten die drempels wegnemen en perspectief openen — lokaal in
+            projecten die drempels wegnemen en perspectief openen, lokaal in
             Zevenaar én internationaal.
           </p>
         </Reveal>
